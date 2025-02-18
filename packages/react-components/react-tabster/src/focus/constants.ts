@@ -4,6 +4,11 @@ export const KEYBOARD_NAV_SELECTOR = `:global([${KEYBOARD_NAV_ATTRIBUTE}])` as c
 /**
  * @internal
  */
+export const SELECT_OPTIONS_VISIBLE_ATTR = 'data-fui-select-options-visible';
+
+/**
+ * @internal
+ */
 export const FOCUS_VISIBLE_ATTR = 'data-fui-focus-visible';
 
 /**

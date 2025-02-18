@@ -1,7 +1,7 @@
 import { isHTMLElement } from '@fluentui/react-utilities';
 import { KEYBORG_FOCUSIN, KeyborgFocusInEvent, createKeyborg, disposeKeyborg } from 'keyborg';
 
-import { FOCUS_VISIBLE_ATTR } from './constants';
+import { FOCUS_VISIBLE_ATTR, SELECT_OPTIONS_VISIBLE_ATTR } from './constants';
 
 /**
  * Because `addEventListener` type override falls back to 2nd definition (evt name is unknown string literal)
@@ -48,6 +48,7 @@ export function applyFocusVisiblePolyfill(scope: HTMLElement, targetWindow: Wind
   function disposeCurrentElement() {
     if (state.current) {
       state.current.removeAttribute(FOCUS_VISIBLE_ATTR);
+      state.current.removeAttribute(SELECT_OPTIONS_VISIBLE_ATTR);
       state.current = undefined;
     }
   }
